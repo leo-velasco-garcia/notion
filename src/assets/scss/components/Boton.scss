@@ -1,0 +1,82 @@
+.compBtn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .25rem .5rem;
+    gap: .5rem;
+    background: none;
+    border: none;
+    border-radius: .25rem;
+    transition: 200ms ease-in-out;
+
+    .principal{
+        height: fit-content;
+        display: flex;
+        gap: .25rem;
+        align-items: center;
+    }
+
+    .material-symbols-outlined {
+        font-size: 1.125rem;
+        transition: 200ms ease-in-out;
+    }
+
+    .textoBoton {
+        font-size: .75rem;
+    }
+}
+
+.compBtn--normal {
+    .material-symbols-outlined {
+        color: $grey--500;
+    }
+
+    &:hover {
+        background: $grey--400;
+    }
+
+    &:active {
+        background: $grey--500;
+
+        .material-symbols-outlined {
+            color: $grey--700;
+        }
+    }
+}
+
+.compBtn--conFondo {
+    background-color: $grey--400;
+
+    .material-symbols-outlined {
+        color: $grey--700;
+    }
+
+    &:hover {
+        background: $grey--600;
+    }
+
+    &:active {
+        background: $grey--700;
+
+        .material-symbols-outlined {
+            color: $grey--900;
+        }
+    }
+}
+
+
+
+.btnTxt {
+    padding: .25rem .5rem;
+}
+
+.btnNoTxt {
+    padding: .25rem;
+    height: fit-content;
+    aspect-ratio: 1;
+}
+
+.command{
+    font-size: .65rem;
+    color: $grey--600;
+}

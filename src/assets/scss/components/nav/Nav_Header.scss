@@ -1,0 +1,42 @@
+.Nav_Header {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    gap: .5rem;
+
+    .primeraLinea{
+        display: flex;
+        justify-content: space-between;
+        flex-flow: row-reverse;
+        .dcha{
+            display: flex;
+        }
+    }
+
+    .segundaLinea {
+        display: flex;
+        border: 2px solid $grey--400;
+        border-radius: .5rem;
+        padding: .25rem;
+        font-size: .825rem;
+        gap: .5rem;
+
+        input {
+            width: 100%;
+            background: none;
+            border: none;
+            color: $grey--900;
+            font-weight: 500;
+
+            &::placeholder {
+                color: $grey--500;
+            }
+        }
+    }
+
+    .terceraLinea{
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+    }
+}

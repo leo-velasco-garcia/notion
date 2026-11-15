@@ -1,0 +1,146 @@
+.Ventana_Item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+
+    .izquierda {
+        display: flex;
+        align-items: center;
+
+
+        //hacer que todos los botones que contiene no tengan opacidad por defecto
+        >* {
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s ease;
+        }
+
+
+
+        //si el popover está abierto (lo comprueba de dos maneras) deja el trigger con opacidad
+        .popover-trigger.is-open,
+        .popover-trigger[aria-expanded="true"] {
+            opacity: 1;
+            pointer-events: auto;
+        }
+    }
+
+    .derecha {
+        display: flex;
+        width: 100%;
+        padding: .1rem .25rem;
+        border-radius: .25rem;
+
+        &:hover {
+            background-color: $grey--400;
+        }
+    }
+
+    .Ventana_IconPag {
+        .IconPag_Izq {
+            display: flex;
+            align-items: center;
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
+
+    &:hover {
+
+        //le da opacidad a los hijos de izquierda cuando hay hover en el item
+        .izquierda>* {
+            opacity: 1;
+            pointer-events: auto;
+        }
+    }
+}
+
+.Ventana_Uno {
+    margin-top: 2rem;
+}
+
+.Ventana_Dos {
+    margin-top: 1.5rem;
+}
+
+.Ventana_Tres {
+    margin-top: 1rem;
+}
+
+.Ventana_Cuatro {
+    margin-top: .75rem;
+}
+
+.Ventana_Pag .derecha .Ventana_Pag_Enlace {
+    display: flex;
+    gap: .5rem;
+
+    .Ventana_Pag_Texto {
+        text-decoration: underline;
+        text-underline-offset: .25rem;
+    }
+}
+
+.Pag_Header_Contenido {
+    height: 22rem;
+}
+
+.Pag_Header_Hueco {
+    height: 17rem;
+}
+
+.Pag_Header {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    cursor: default;
+
+    .Pag_Header_Figure {
+        width: 100%;
+
+        .Pag_Header_Img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .Pag_Header_Figure_Contenido {
+        height: 15rem;
+        margin-bottom: -5rem;
+    }
+
+    .Pag_Header_Figure_Hueco {
+        height: 10rem;
+    }
+
+    .Pag_Header_Contenido {
+        display: flex;
+        flex-flow: column;
+        width: 100%;
+        max-width: 1080px;
+        gap: .25rem;
+        padding: 0 1rem 0 calc(1.5rem + 52px);
+        margin-bottom: 2rem;
+
+        .Pag_Header_Icono {
+            font-size: 5rem;
+        }
+
+        .Pag_Header_Botones {
+            display: flex;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity .2s ease;
+        }
+    }
+}
+
+.Pag_Header:hover {
+    .Pag_Header_Botones {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}

@@ -1,0 +1,42 @@
+.Ventana_Header{
+    display: flex;
+    flex: 0;
+    justify-content: space-between;
+    padding: .5rem;
+
+    .Ventana_Header_Izq{
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        .compBtn {
+            box-sizing: content-box;
+            flex: 0 0 fit-content;
+            opacity: 1;
+            transform: scale(1);
+            visibility: visible;
+            transition: 200ms ease-in-out;
+        }
+
+        .desaparece{
+            width: 0;
+            min-width: 0;
+            flex-basis: 0;
+            padding: 0;
+            opacity: 0;
+            // visibility: hidden;
+            pointer-events: none;
+        }
+    }
+
+    .Ventana_Header_Dch{
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+    }
+
+    .Ventana_Header_Spans{
+        font-size: .85rem;
+        font-weight: 600;
+        color: $grey--600;
+    }
+}

@@ -1,0 +1,48 @@
+.Nav_Footer {
+    display: flex;
+    gap: .25rem;
+    width: 100%;
+    flex-shrink: 0;
+
+    .Nav_Footer_GranBtn {
+        flex: 1 1 auto;
+        min-width: 0;
+
+        .principal {
+            flex: 1;
+            min-width: 0;
+
+            .material-symbols-outlined {
+                flex-shrink: 0;
+            }
+
+            .textoBoton {
+                flex: 1;
+                min-width: 0;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                text-align: left;
+            }
+        }
+
+        >.material-symbols-outlined,
+        >.command {
+            flex-shrink: 0;
+        }
+    }
+
+    .Nav_Footer_Actions {
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+        gap: .25rem;
+
+        .Nav_Footer_Btn {
+            display: flex;
+            padding: .125rem;
+            background: none;
+            border: none;
+        }
+    }
+}

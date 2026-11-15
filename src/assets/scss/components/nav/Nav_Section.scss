@@ -1,0 +1,68 @@
+.Nav_Section {
+    display: flex;
+    flex-flow: column;
+    gap: .25rem;
+
+    .Nav_Section_Header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: .25rem;
+        padding: 0 .25rem;
+
+        &:hover {
+            background-color: $grey--400;
+
+            .Nav_Section_Header_Desplegable{
+                display: flex;
+            }
+
+            .Nav_Section_Header_Action {
+                display: flex;
+            }
+        }
+
+        .Nav_Section_Header_Izq {
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+        }
+
+        .Nav_Section_Header_Dch {
+            display: flex;
+            gap: .5rem;
+        }
+
+        .Nav_Section_Header_Desplegable {
+            display: none;
+            padding: 0;
+            aspect-ratio: 1;
+        }
+
+        .Nav_Section_Header_Action {
+            display: none;
+            padding: 0;
+            aspect-ratio: 1;
+        }
+
+        h4 {
+            color: $grey--500;
+            line-height: 22px;
+        }
+    }
+
+    .Nav_Section_Resto {
+        display: flex;
+        flex-flow: column;
+    }
+
+    .Nav_Section_Resto:empty {
+        display: none;
+    }
+}
+
+.Nav_Section_Open{
+    .Nav_Section_Header_Desplegable {
+        transform: rotate(90deg);
+    }
+}
