@@ -31,6 +31,7 @@ export function Popover({ trigger, children, placement = 'left' }) {
         open: isOpen,
         onOpenChange: setIsOpen,
         placement,
+        strategy: "fixed",
         whileElementsMounted: autoUpdate, // que se quede pegado al hacer scroll
         middleware: [ //importante el orden del contenido de middleware, porque unas cosas afectan a otras, este es el correcto
             offset(GAP), // separación botón y popover

@@ -10,10 +10,16 @@
         border-radius: .25rem;
         padding: 0 .25rem;
 
+        &:has(.popover-trigger.is-open) {
+            .Nav_Section_Header_Action {
+                display: flex;
+            }
+        }
+
         &:hover {
             background-color: $grey--400;
 
-            .Nav_Section_Header_Desplegable{
+            .Nav_Section_Header_Desplegable {
                 display: flex;
             }
 
@@ -61,7 +67,7 @@
     }
 }
 
-.Nav_Section_Open{
+.Nav_Section_Open {
     .Nav_Section_Header_Desplegable {
         transform: rotate(90deg);
     }

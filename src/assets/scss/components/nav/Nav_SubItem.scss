@@ -7,9 +7,8 @@
     padding: .25rem .5rem .25rem .5rem;
     margin-left: .5rem;
 
-
-
-    &:hover {
+    &:hover,
+    &:has(.popover-trigger.is-open) {
 
         .Nav_SubItem_Contenido {
             .Nav_Subitem_Emoji {
@@ -24,6 +23,8 @@
 
         .Nav_SubItem_Actions {
             display: flex;
+            align-items: center;
+            gap: .25rem;
 
             button {
                 padding: 0;
@@ -59,7 +60,7 @@
     }
 }
 
-.Nav_SubItem--default:hover{
+.Nav_SubItem--default:hover {
     background-color: $grey--400;
 }
 

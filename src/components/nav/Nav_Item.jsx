@@ -1,5 +1,7 @@
 import "../../assets/scss/components/nav/Nav_Item.scss";
 import Boton from "../Boton";
+import { Popover } from "../popover/Popover";
+import Pop_Content from "../popover/Pop_Content";
 
 const Nav_Item = ({ emoji, text, itemOpen, onToggle, children }) => {
     return (
@@ -14,7 +16,21 @@ const Nav_Item = ({ emoji, text, itemOpen, onToggle, children }) => {
                 </div>
                 <div className="Nav_Item_Actions">
                     <Boton icon={"add"}></Boton>
-                    <Boton icon={"more_horiz"}></Boton>
+                    <Popover trigger={<Boton icon="more_horiz" />}>
+                        <Pop_Content titulo="Página" placement="right-start">
+                            <Boton icon="star" texto="Añadir a favoritos" />
+                            <div className="separador"></div>
+                            <Boton icon="link_2" texto="Copiar enlace" />
+                            <Boton icon="content_copy" texto="Duplicar" command="⌘D" />
+                            <Boton icon="arrow_top_right" texto="Mover a" command="⌘⇧P" />
+                            <Boton icon="delete" texto="Mover a la papelera" command="Del" />
+                            <div className="separador"></div>
+                            <Boton icon="swap_horiz" texto="Convertir en wiki" />
+                            <div className="separador"></div>
+                            <Boton icon="arrow_outward" texto="Nueva pestaña" command="⌘⇧⏎" />
+                            <Boton icon="dock_to_right" texto="Abrir en la ventana lateral" command="⌥Click" />
+                        </Pop_Content>
+                    </Popover>
                 </div>
             </div>
             <div className="Nav_Item_Subitems">
